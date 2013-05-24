@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The purpose of this script is to keep the Chromium cache from getting out
-# of hand.
+# of hand. Eventually, it will be merged with a backup script.
 
 du -h --max-depth=1 /home/rog/.cache/chromium/Default/Cache/
 
