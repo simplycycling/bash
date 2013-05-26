@@ -19,7 +19,7 @@ x=$(du -h --max-depth=1 ~/.cache/chromium/Default/Cache/)
 #
 # But in the meantime, we'll just do this:
 
-find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -delete
+find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -mtime +2 -delete
 
 echo "$x cleared out."
 
