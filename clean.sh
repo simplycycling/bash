@@ -3,7 +3,7 @@
 # The purpose of this script is to keep the Chromium cache from getting out
 # of hand. Eventually, it will be merged with a backup script.
 
-du -h --max-depth=1 /home/rog/.cache/chromium/Default/Cache/
+x=$(du -h --max-depth=1 ~/.cache/chromium/Default/Cache/)
 
 # Pseudocode for the next part of this script
 #
@@ -16,8 +16,15 @@ du -h --max-depth=1 /home/rog/.cache/chromium/Default/Cache/
 #
 # If the cache is less than 100 MB
 # Then echo that there is plenty of free space
+#
+# But in the meantime, we'll just do this:
 
-sleep 7
+find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -delete
+
+echo "$x cleared out."
+
+sleep 1
 
 echo 'Finish writing that script, boy!'
-sleep 3
+
+sleep 1
