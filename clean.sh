@@ -21,7 +21,11 @@ x=$(du -h --max-depth=1 ~/.cache/chromium/Default/Cache/)
 
 find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -mtime +2 -delete
 
-echo "$x cleared out."
+y=$(du -h --max-depth=1 ~/.cache/chromium/Default/Cache/)
+
+z=$((x-y))
+
+echo "$z cleared out."
 
 sleep 1
 
