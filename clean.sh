@@ -3,7 +3,7 @@
 # The purpose of this script is to keep the Chromium cache from getting out
 # of hand. Eventually, it will be merged with a backup script.
 
-x=$(du -h --max-depth=1 ~/.cache/chromium/Default/Cache/)
+x=$(du ~/.cache/chromium/Default/Cache/ | awk '{print $1}')
 
 # Pseudocode for the next part of this script
 #
@@ -19,9 +19,9 @@ x=$(du -h --max-depth=1 ~/.cache/chromium/Default/Cache/)
 #
 # But in the meantime, we'll just do this:
 
-find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -mtime +2 -delete
+#find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -mtime +2 -delete
 
-y=$(du -h --max-depth=1 ~/.cache/chromium/Default/Cache/)
+y=$(du ~/.cache/chromium/Default/Cache/ | awk '{print $1}')
 
 z=$((x-y))
 
