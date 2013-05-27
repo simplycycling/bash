@@ -19,7 +19,7 @@ x=$(du ~/.cache/chromium/Default/Cache/ | awk '{print $1}')
 #
 # But in the meantime, we'll just do this:
 
-#find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -mtime +2 -delete
+find ~/.cache/chromium/Default/Cache/ -mindepth 1 -type f -mtime +2 -delete
 
 y=$(du ~/.cache/chromium/Default/Cache/ | awk '{print $1}')
 
