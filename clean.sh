@@ -25,7 +25,9 @@ y=$(du ~/.cache/chromium/Default/Cache/ | awk '{print $1}')
 
 z=$((x-y))
 
-echo "$z cleared out."
+d=$((z/1024))
+
+echo "$d M cleared out."
 
 sleep 1
 
