@@ -1,0 +1,12 @@
+#!/usr/bin/expect
+set hst [lrange $argv 0 0]
+set password [lrange $argv 1 1]
+set usr [lrange $argv 2 2 ]
+#set timeout 5
+set timeout 1
+spawn ssh-copy-id $usr@$hst
+expect "*?assword:*"
+send "$password\r"
+sleep 2
+expect eof
+
