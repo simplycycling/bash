@@ -11,11 +11,11 @@
 mv /Users/rsherman/dotfiles-*.tgz /Users/rsherman/Google\ Drive/dotfiles/
 
 # Then we make sure the directory these tarballs get moved to doesn't get out of hand
-if [[ $(ls /Users/rsherman/Google\ Drive/dotfiles | wc -l) > 10 ]]
+value=$( ls -l ~/Google\ Drive/dotfiles/ | wc -l )
+if [ $value -gt 5 ]
 then
-  find /Users/rsherman/Google\ Drive/dotfiles ! -newer $(ls -t | sed '11!d') -exec rm {} \;
+	/usr/bin/find /Users/rsherman/Google\ Drive/dotfiles -mtime +5 -exec rm {} \;
 fi
-
 # That's it!
 /bin/echo "All dot files backed up, sir!"
 
