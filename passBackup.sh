@@ -17,5 +17,6 @@ then
 	/usr/bin/find /Users/rsherman/Google\ Drive/passBackup -mtime +5 -exec rm {} \;
 fi
 # That's it!
+/bin/echo " "
 /bin/echo "All pass files backed up, sir!"
 
