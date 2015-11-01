@@ -17,5 +17,6 @@ then
 	/usr/bin/find /Users/rsherman/Google\ Drive/dotfiles -mtime +5 -exec rm {} \;
 fi
 # That's it!
+/bin/echo " "
 /bin/echo "All dot files backed up, sir!"
 
