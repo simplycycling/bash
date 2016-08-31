@@ -4,11 +4,13 @@
 # vim and irssi dot directories. Full file paths necessary, as this is used in
 # a cron job.
 
+/usr/bin/cd /Users/rsherman/Documents/open_source_projects/dotfiles
+
 # First, we tar everything up
-/usr/bin/tar -czvf /Users/rsherman/dotfiles-$(date +%m-%d-%Y).tgz /Users/rsherman/.aliases /Users/rsherman/.bash_profile /Users/rsherman/.bash_prompt /Users/rsherman/.exports /Users/rsherman/.gitconfig /Users/rsherman/.helpers /Users/rsherman/.inputrc /Users/rsherman/.irssi /Users/rsherman/.vim /Users/rsherman/.vimrc 
+/usr/bin/tar -czvf dotfiles-$(date +%m-%d-%Y).tgz .aliases .bash_profile .bash_prompt .exports .gitconfig .helpers .inputrc .irssi .vim .vimrc
 
 # Next we move it to Google Drive
-mv /Users/rsherman/dotfiles-*.tgz /Users/rsherman/Google\ Drive/dotfiles/
+mv /Users/rsherman//Documents/open_source_projects/dotfiles/dotfiles-*.tgz /Users/rsherman/Google\ Drive/dotfiles/
 
 # Then we make sure the directory these tarballs get moved to doesn't get out of hand
 value=$( ls -l ~/Google\ Drive/dotfiles/ | wc -l )
