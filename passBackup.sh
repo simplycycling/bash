@@ -4,8 +4,10 @@
 # Full file paths necessary, as this is used in
 # a cron job.
 
+/usr/bin/cd /Users/rsherman
+
 # First, we tar everything up
-/usr/bin/tar -czvf /Users/rsherman/passBackup-$(date +%m-%d-%Y).tgz /Users/rsherman/.password-store 
+/usr/bin/tar -czvf passBackup-$(date +%m-%d-%Y).tgz .password-store
 
 # Next we move it to Google Drive
 mv /Users/rsherman/passBackup-*.tgz /Users/rsherman/Google\ Drive/passBackup/
