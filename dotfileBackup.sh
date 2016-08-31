@@ -14,9 +14,9 @@ mv /Users/rsherman//Documents/open_source_projects/dotfiles/dotfiles-*.tgz /User
 
 # Then we make sure the directory these tarballs get moved to doesn't get out of hand
 value=$( ls -l ~/Google\ Drive/dotfiles/ | wc -l )
-if [ $value -gt 5 ]
+if [ ${value} -gt 5 ]
 then
-	/usr/bin/find /Users/rsherman/Google\ Drive/dotfiles -mtime +5 -exec rm {} \;
+	/usr/bin/find /Users/rsherman/Google\ Drive/dotfiles -mtime +5 -exec rm \;
 fi
 # That's it!
 /bin/echo " "
