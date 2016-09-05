@@ -2,7 +2,6 @@
 gpgproc=$(pgrep gpg-agent)
 file=".gpg-agent-info"
 cd ~/
-echo "$gpgproc"
 kill -9 "$gpgproc"
 if [ -f "$file" ]
 then
