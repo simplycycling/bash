@@ -18,6 +18,11 @@ if [ ${value} -gt 5 ]
 then
 	/usr/bin/find /Users/rsherman/Google\ Drive/dotfiles -mtime +5 -exec rm \;
 fi
-# That's it!
+# That's it! Now, let's make sure the file exists - if not, you will receive a rather rude message.
 /bin/echo " "
-/bin/echo "All dot files backed up, sir!"
+if [ -f ~/Google\ Drive/passBackup/passBackup-$(date +%m-%d-%Y).tgz ]
+then
+    /bin/echo "All dot files backed up, sir!"
+else
+    /bin/echo "your so speshul"
+fi
