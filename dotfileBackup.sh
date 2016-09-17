@@ -7,7 +7,7 @@
 /usr/bin/cd /Users/rsherman/Documents/open_source_projects/dotfiles
 
 # First, we tar everything up
-/usr/bin/tar -czvf dotfiles-$(date +%m-%d-%Y).tgz .aliases .bash_profile .bash_prompt .exports .gitconfig .helpers .inputrc .irssi .vim .vimrc
+/usr/bin/tar -czf dotfiles-$(date +%m-%d-%Y).tgz .aliases .bash_profile .bash_prompt .exports .gitconfig .helpers .inputrc .irssi .vim .vimrc
 
 # Next we move it to Google Drive
 mv /Users/rsherman//Documents/open_source_projects/dotfiles/dotfiles-*.tgz /Users/rsherman/Google\ Drive/dotfiles/

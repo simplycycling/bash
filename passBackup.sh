@@ -7,7 +7,7 @@
 /usr/bin/cd /Users/rsherman
 
 # First, we tar everything up
-/usr/bin/tar -czvf passBackup-$(date +%m-%d-%Y).tgz .password-store
+/usr/bin/tar -czf passBackup-$(date +%m-%d-%Y).tgz .password-store
 
 # Next we move it to Google Drive
 mv /Users/rsherman/passBackup-*.tgz /Users/rsherman/Google\ Drive/passBackup/
