@@ -16,7 +16,7 @@ mv /Users/rsherman/passBackup-*.tgz /Users/rsherman/Google\ Drive/passBackup/
 value=$( ls -l ~/Google\ Drive/passBackup/ | wc -l )
 if [ ${value} -gt 5 ]
 then
-	/usr/bin/find /Users/rsherman/Google\ Drive/passBackup -mtime +5 -exec rm  \;
+	/usr/bin/find /Users/rsherman/Google\ Drive/passBackup -mtime +5 -exec rm {} \;
 fi
 # That's it!
 /bin/echo " "
